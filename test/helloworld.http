@@ -1,0 +1,9 @@
+### 环境变量&参数测试
+### TODO:需要配置grpc gateway
+
+POST {{grpc_host}}/helloworld.Greeter/SayHello
+content-type: application/json
+
+{
+  "name": "123"
+}

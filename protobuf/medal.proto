@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package api;
+
+option go_package="./medal_server";
+
+// The greeting service definition.
+service MedalService {
+  // Sends a greeting
+  rpc GetMedalList (GetMedalListReq) returns (GetMedalListResp) {}
+}
+
+// The request message containing the user's name.
+message GetMedalListReq {
+  string UserDid = 1;
+}
+
+// The response message containing the greetings
+message GetMedalListResp {
+  int32 Retcode = 1;
+  string Message = 2;
+  MedalList Data = 3;
+}
+
+message MedalList{
+  repeated MedalInfo MedalInfoList = 3;
+}
+
+message MedalInfo {
+  string UserDid = 1;
+  string EventUid = 2;
+  string Teacher = 3;
+  int32 MedalStatus = 4;
+  string ChainHash = 5;
+  int32 ChainStatus = 6;
+}
