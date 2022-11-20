@@ -1,8 +1,8 @@
-# xinsitute_platform
+# pkxing_platform
 
 
 ## 基于eagle框架（gin+gorm+viper+sarma）
-
+https://github.com/go-eagle/eagle
 
 ### 生成pb文件
 - 为避免不同开发同学的protoc版本不一致，统一使用make pb生成，依赖docker镜像
@@ -25,7 +25,3 @@ make pb
 ### 日志服务
 logger
 
-
-### 服务划分
-admin作为服务分发rpc服务层
-core作为rpc服务核心
